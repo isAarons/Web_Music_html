@@ -1,0 +1,91 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.topbar{
+    padding:8px;
+    line-height:60px; 
+	height:60px;
+    align-items:center;
+    background-color:black;
+    width:100%;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+}
+.topbar div{
+    width: auto;
+    text-align:center;
+    margin-left: 10%;
+    margin-right: auto;
+}
+/* .topbar ul {
+    list-style-type: none;
+    float: left;
+    background-color: black;
+    height: auto;
+} */
+.topbar ul li{
+    text-align: center;
+}
+.topbar #ul1 li {
+    list-style-type: none;
+    display: block;
+    width: 80px;
+    height: 60px;
+    float: left;
+}
+.topbar #ul2 li{
+    display: block;
+    width: 300px;
+    height: 60px;
+    float: left;
+}
+.topbar #ul4 li{
+    display: block;
+    width: 115px;
+    height: 60px;
+    float: left;
+}
+.topbar #ul3 li {
+    list-style-type: none;
+    display: block;
+    width: 80px;
+    height: 60px;
+    float: left;
+}
+.topbar ul li :hover{
+    background-color: white;
+    color: black;
+}
+.topbar ul li a {
+    display: block;
+    width: 60px;
+    text-decoration: none;
+    color: aliceblue;
+}
+
+.topbar #ul2{
+    width: auto;
+    height: auto;
+}
+.topbar ul li #search{
+    width: 100px;
+    height:28px;
+    padding:0 0 0 0px;
+    border: 1px solid #3db3d1;;
+    border-radius:20px 20px 20px 20px;
+    background: transparent;
+    color: white;
+
+}
+.input{
+    width: 260px;
+    border: 1px solid #e2e2e2;
+    height: 30px;   
+	border-radius:20px 20px 20px 20px;
+    background-repeat: no-repeat;
+    background-size: 25px;
+    background-position:5px center;
+    padding:0 0 0 20px;
+}

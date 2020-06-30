@@ -2,12 +2,15 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color: darkcyan;
+}
 .topbar{
     padding:8px;
     line-height:60px; 
 	height:60px;
     align-items:center;
-    background-color:black;
+    background-color:rgb(0, 53, 59);
     width:100%;
     margin-left:auto;
     margin-right:auto;
@@ -16,24 +19,30 @@
 .topbar div{
     width: auto;
     text-align:center;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: auto;
 }
-/* .topbar ul {
-    list-style-type: none;
-    float: left;
-    background-color: black;
-    height: auto;
-} */
+
 .topbar ul li{
     text-align: center;
 }
 .topbar #ul1 li {
+    overflow: hidden;
     list-style-type: none;
     display: block;
     width: 80px;
     height: 60px;
     float: left;
+    color: white;
+}
+.topbar #ul1 li:hover {
+    background-color:rgba(19, 131, 134, 0.5);
+    border-left: 1px solid #ecebeb;
+}
+
+.topbar ul li :hover{
+    background-color: rgba(19, 131, 134, 0.5);
+    color: black;
 }
 .topbar #ul2 li{
     display: block;
@@ -54,13 +63,10 @@
     height: 60px;
     float: left;
 }
-.topbar ul li :hover{
-    background-color: white;
-    color: black;
-}
+
 .topbar ul li a {
     display: block;
-    width: 60px;
+    width: 70px;
     text-decoration: none;
     color: aliceblue;
 }
@@ -88,4 +94,11 @@
     background-size: 25px;
     background-position:5px center;
     padding:0 0 0 20px;
+}
+.content .list{
+    overflow: hidden;
+    display: none;
+}
+.content #list1{
+    display: block;
 }

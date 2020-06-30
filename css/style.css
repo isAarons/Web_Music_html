@@ -2,12 +2,15 @@
     padding: 0;
     margin: 0;
 }
+body{
+    background-color:whitesmoke;
+}
 .topbar{
     padding:8px;
     line-height:60px; 
 	height:60px;
     align-items:center;
-    background-color:black;
+    background-color:rgb(0, 53, 59);
     width:100%;
     margin-left:auto;
     margin-right:auto;
@@ -16,24 +19,30 @@
 .topbar div{
     width: auto;
     text-align:center;
-    margin-left: 10%;
+    margin-left: 15%;
     margin-right: auto;
 }
-/* .topbar ul {
-    list-style-type: none;
-    float: left;
-    background-color: black;
-    height: auto;
-} */
+
 .topbar ul li{
     text-align: center;
 }
 .topbar #ul1 li {
+    overflow: hidden;
     list-style-type: none;
     display: block;
     width: 80px;
     height: 60px;
     float: left;
+    color: white;
+}
+.topbar #ul1 li:hover {
+    background-color:rgba(19, 131, 134, 0.5);
+    border-left: 1px solid #ecebeb;
+}
+
+.topbar ul li :hover{
+    background-color: rgba(19, 131, 134, 0.5);
+    color: black;
 }
 .topbar #ul2 li{
     display: block;
@@ -54,13 +63,10 @@
     height: 60px;
     float: left;
 }
-.topbar ul li :hover{
-    background-color: white;
-    color: black;
-}
+
 .topbar ul li a {
     display: block;
-    width: 60px;
+    width: 70px;
     text-decoration: none;
     color: aliceblue;
 }
@@ -88,4 +94,56 @@
     background-size: 25px;
     background-position:5px center;
     padding:0 0 0 20px;
+}
+.content .list{
+    overflow: hidden;
+    display: none;
+}
+.content #list1{
+    display: block;
+}
+/* yinduowen */
+.containers{
+    width: 800px;
+    height: 600px;
+    margin: 10% auto; 
+    /* 隐藏超出的部分  */
+    overflow: hidden;  /*窗口固定，不提供滚动条查看*/
+    position: relative;  /*实现隐藏*/
+}
+.ulContainer{
+    /* 定义容器承载的宽度 */
+    width: 8000px;
+    height: 700px;
+    /* 使图片并列排成一行显示 */
+    display: flex;
+    flex-direction: row;
+    position: absolute;/*水平垂直居中*/
+    left: 0;
+    right: 0;
+    transition:all 0.5s;
+}
+.lis{
+    width: 800px;
+    height: 100%;
+}
+.lis img{
+    width: 100%;
+    height: 100%;
+}
+.direction{
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   z-index: 1111;
+}
+.direction img:nth-child(1){
+    position: absolute;
+    left: -400px;
+    cursor: pointer;
+}
+.direction img:nth-child(2){
+    position: absolute;
+    right: -400px;
+    cursor: pointer;/*鼠标触碰展示手指效果*/
 }

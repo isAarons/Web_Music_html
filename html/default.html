@@ -4,6 +4,7 @@
     <head><link rel="stylesheet" type="text/css" href="../css/style.css" /> </head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js"></script>
     <title>Default paSge</title>
 </head>
 <body>
@@ -11,26 +12,62 @@
         <div>
             <ul id="ul1">
                 <!-- <li><img src="../images/1.png" alt=""></li> -->
-                <li><a href="">首页</a></li>
-                <li><a href="">榜单</a></li>
-                <li><a href="">歌手</a></li>
-                <li><a href="">标签</a></li>
-                <li><a href="">歌单</a></li>
-                <li><a href="">专辑</a></li>
-                <li><a href="">mv</a></li>
+                <li class="selected"><p>首页</p></li>
+                <li><p>榜单</p></li>
+                <li><p>我的喜欢<p></li>
+                <li><p>歌单<p></li>
+                <li><p>听歌记录<p></li>
             </ul>
-            <ul id="ul2">
-                <li><input class="input" type="text" placeholder="查找音乐"></li> 
-            </ul> 
-            <ul id="ul4">
-                <li><input id="search" type="button" value="搜索"></li>
-            </ul>
+            <form action="">
+                <ul id="ul2">
+                    <li><input class="input" type="text" placeholder="查找音乐"></li> 
+                </ul> 
+                <ul id="ul4">
+                    <li><input id="search" type="button" value="搜索"></li>
+                </ul>
+            </form>
             <ul id="ul3">
                 <li><a href="">注册</a></li>
                 <li><a href="">登录</a></li>
             </ul>
         </div>
    </div>
-            
+   <div class="content">
+        <div class="list" id="list1">
+            <h3>this is page 1</h3>
+        </div>
+        <div class="list">
+             <h3>this is page 2</h3>
+        </div>
+        <div class="list">
+             <h3>this is page 3</h3>
+        </div>
+        <div class="list">
+             <h3>this is page 4</h3>
+        </div>
+        <div class="list">
+            <h3>this is page 5</h3>
+       </div>
+    </div>
+    <script>
+        $(function(){
+            //获取点击事件的对象
+            $(".topbar #ul1 li").click(function(){
+                //获取要显示或隐藏的对象
+                var divShow = $(".content").children('.list');
+                //判断当前对象是否被选中，如果没选中的话进入if循环
+                if (!$(this).hasClass('selected')) {
+                    //获取当前对象的索引
+                    var index = $(this).index();
+                    //当前对象添加选中样式并且其同胞移除选中样式；
+                    $(this).addClass('selected').siblings('li').removeClass('selected');
+                    //索引对应的div块显示
+                    $(divShow[index]).show();
+                    //索引对应的div块的同胞隐藏
+                    $(divShow[index]).siblings('.list').hide();
+                }
+            });
+        });
+</script>
 </body>
 </html>

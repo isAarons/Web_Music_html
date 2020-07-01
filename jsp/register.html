@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" type="text/css" href="../css/login.css" /> 
+</head>
+<body>
+    <div class="sub-main-w3">
+		<!-- 通过表单传递参数到servlet，对比账户密码 -->
+		<form action="/jsp/insert.jsp" method="post">
+			<div class="form-style-agile">
+				<label>
+					Username
+					<i class="fas fa-user"></i>
+				</label>
+				<input placeholder="Username" name="Name" type="text" required="">
+			</div>
+			<div class="form-style-agile">
+				<label>
+					Password
+					<i class="fas fa-unlock-alt"></i>
+				</label>
+				<input placeholder="Password" name="Password" type="password" required="">
+            </div>
+            <div class="form-style-agile">
+				<label>
+					Nickname
+					<i class="fas fa-user"></i>
+				</label>
+				<input placeholder="Nickname" name="Nickname" type="text" required="">
+			</div>
+
+			<input type="submit" value="Commit">
+		</form>
+
+	</div>
+</body>
+</html>
